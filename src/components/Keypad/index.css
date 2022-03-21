@@ -1,0 +1,52 @@
+.keypad {
+  display: grid;
+  grid-template:
+    [row1-start] "upLeft up upRight" 50px [row1-end]
+    [row2-start] "left reset right" 50px [row2-end]
+    [row3-start] ". down ." 50px [row3-end]
+    / 50px 50px 50px;
+  gap: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.keypad > button {
+  cursor: pointer;
+  transition: border-radius 250ms;
+  border-radius: 50%;
+  border: none;
+}
+
+.keypad > button:hover,
+.keypad > button:hover {
+  border-radius: 10%;
+}
+
+.keypad > :nth-child(1) {
+  grid-area: upLeft;
+  transform: rotate(-135deg);
+}
+.keypad > :nth-child(2) {
+  grid-area: up;
+  transform: rotate(-90deg);
+}
+.keypad > :nth-child(3) {
+  grid-area: upRight;
+  transform: rotate(-45deg);
+}
+.keypad > :nth-child(4) {
+  grid-area: left;
+  transform: rotate(-180deg);
+}
+.keypad > :nth-child(5) {
+  grid-area: reset;
+}
+.keypad > :nth-child(6) {
+  grid-area: right;
+}
+.keypad > :nth-child(7) {
+  grid-area: down;
+  transform: rotate(90deg);
+}

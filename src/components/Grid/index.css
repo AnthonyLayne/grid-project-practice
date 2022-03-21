@@ -1,0 +1,20 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.grid .row {
+  display: flex;
+}
+
+.grid .row .square {
+  min-width: 75px;
+  min-height: 75px;
+  border: 1px solid white;
+  background-color: dimgray;
+}
+
+.grid .row .square.selected {
+  background-color: #3d7d80;
+}
